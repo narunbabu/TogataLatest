@@ -2,10 +2,24 @@ import React, { useState } from 'react';
 import {Alert, View} from 'react-native';
 
 import * as api from "../../services/auth";
-
-import Form from 'react-native-basic-form';
+import mFormData from './ForgotPassword/forgotpassword_form';
+import validation from './ForgotPassword/forgotpassword_validation';
+import MForm from '../../formcomponents';
+import CTA from '../../components/CTA';
+// import Form from 'react-native-basic-form';
 import {Header, ErrorText} from "../../components/Shared";
-
+function Mycomponent(props) {
+    const {navigation} = props;
+    return (
+      <View>
+        <CTA
+          title={"Remember password?"}
+          ctaText={"Login"}
+          onPress={() => navigation.replace("Login")}
+          style={{marginTop: 50}}/>
+      </View>
+    );
+  }
 export default function ForgotPassword(props) {
     const {navigation} = props;
 
@@ -13,7 +27,7 @@ export default function ForgotPassword(props) {
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(false);
 
-    const fields = [{name: 'email', label: 'Email Address', required: true}];
+    // const fields = [{name: 'email', label: 'Email Address', required: true}];
 
     async function onSubmit(state) {
         setLoading(true);
@@ -34,13 +48,20 @@ export default function ForgotPassword(props) {
         }
     }
 
-    let formProps = {title: "Submit", fields, onSubmit, loading };
+    // let formProps = {title: "Submit", fields, onSubmit, loading };
     return (
         <View style={{flex: 1, paddingHorizontal: 16, backgroundColor:"#fff"}}>
             <Header title={"Recover Password"}/>
             <View style={{flex:1}}>
                 <ErrorText error={error}/>
-                <Form {...formProps}/>
+                {/* <Form {...formProps}/> */}
+                <MForm
+                    mFormData={mFormData}
+                    validation={validation}
+                    onSubmitData={onSubmit}
+                    Extracomp={Mycomponent}
+                    navigation={navigation}
+                />
             </View>
         </View>
     );

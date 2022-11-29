@@ -9,7 +9,7 @@ import HomeScreen from '../scenes/home/Home';
 // import AddHouseScreen from '../scenes/home/AddHouse';
 
 import {headerStyle, headerTitleStyle} from '../theme';
-// import EnterHouseDetailsScreen from '../scenes/home/EnterHouseDetails';
+import EnterHouseDetailsScreen from '../scenes/home/EnterHouseDetails';
 // import EnterHouseHoldScreen from '../scenes/home/EnterHouseHold';
 
 const HomeStack = createStackNavigator(
@@ -18,7 +18,7 @@ const HomeStack = createStackNavigator(
     // UpdateProfile: UpdateProfileScreen,
     // EnterCensus: EnterCensusScreen,
     // SelectVillage: SelectVillageScreen,
-    // EnterHouseDetails: EnterHouseDetailsScreen,
+    EnterHouseDetails: EnterHouseDetailsScreen,
     // EnterHouseHold: EnterHouseHoldScreen,
     // AddHouse: AddHouseScreen,
   },

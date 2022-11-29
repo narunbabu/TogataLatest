@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import mFormData from './House/house_form';
 import validation from './House/house_validation';
 import value_data from './House/set_values';
-// import {View} from 'react-native';
+import {View} from 'react-native';
 
 // import * as api from "../../services/auth";
 // import { useAuth } from "../../provider";
@@ -10,9 +10,17 @@ import value_data from './House/set_values';
 // import Form from 'react-native-basic-form';
 // import {ErrorText} from "../../components/Shared";
 import MForm from '../../formcomponents';
+function Mycomponent(props) {
+  const {navigation} = props;
 
+  return (
+    <View>
+      
+    </View>
+  );
+}
 export default function EnterHouseDetails(props) {
-  // const {navigation} = props;
+  const {navigation} = props;
 
   // //1 - DECLARE VARIABLES
   // const [error, setError] = useState(null);
@@ -39,11 +47,19 @@ export default function EnterHouseDetails(props) {
 
   // let formProps = {title: "Submit", fields, onSubmit, loading };
   return (
+    // <MForm
+    //   mFormData={mFormData}
+    //   validation={validation}
+    //   onSubmitData={onSubmit}
+    // />
+
     <MForm
-      mFormData={mFormData}
-      validation={validation}
-      onSubmitData={onSubmit}
-    />
+        mFormData={mFormData}
+        validation={validation}
+        onSubmitData={onSubmit}
+        Extracomp={Mycomponent}
+        navigation={navigation}
+      />
     // <View style={{flex:1, paddingHorizontal: 16}}>
     //     <View style={{flex:1}}>
     //         <ErrorText error={error}/>

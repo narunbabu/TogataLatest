@@ -20,7 +20,7 @@ function Mycomponent(props) {
 
       <CTA
         ctaText={'Forgot Password?'}
-        onPress={() => navigation.navigate('ForgotPassword')}
+        onPress={() => {console.log('Forgot password pressed');navigation.replace('ForgotPassword')}}
         style={{marginTop: 20}}
       />
 
@@ -75,7 +75,7 @@ export default function Login(props) {
   // let formProps = {title: "Submit", fields, onSubmit, loading };
   return (
     <View style={{flex: 1, paddingHorizontal: 16, backgroundColor: '#fff'}}>
-      <Text>Login</Text>
+
       <MForm
         mFormData={mFormData}
         validation={validation}

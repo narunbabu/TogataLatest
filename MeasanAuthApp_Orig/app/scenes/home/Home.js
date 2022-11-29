@@ -17,7 +17,7 @@ export default function Home(props) {
 
             <Button title={"Update Profile"} onPress={() => navigate('UpdateProfile')}/>
 
-            <Button title={"Census Entry"} onPress={() => navigate('EnterCensus')}/>
+            <Button title={"Census Entry"} onPress={() => navigate('EnterHouseDetails')}/>
 
             <Button title={"Log Out"} onPress={() => {
                 handleLogout();
