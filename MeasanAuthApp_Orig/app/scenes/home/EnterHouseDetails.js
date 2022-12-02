@@ -13,11 +13,7 @@ import MForm from '../../formcomponents';
 function Mycomponent(props) {
   const {navigation} = props;
 
-  return (
-    <View>
-      
-    </View>
-  );
+  return <View></View>;
 }
 export default function EnterHouseDetails(props) {
   const {navigation} = props;
@@ -54,12 +50,13 @@ export default function EnterHouseDetails(props) {
     // />
 
     <MForm
-        mFormData={mFormData}
-        validation={validation}
-        onSubmitData={onSubmit}
-        Extracomp={Mycomponent}
-        navigation={navigation}
-      />
+      mFormData={mFormData}
+      validation={validation}
+      onSubmitData={onSubmit}
+      Extracomp={Mycomponent}
+      navigation={navigation}
+      button_title={'Submit'}
+    />
     // <View style={{flex:1, paddingHorizontal: 16}}>
     //     <View style={{flex:1}}>
     //         <ErrorText error={error}/>

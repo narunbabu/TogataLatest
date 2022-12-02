@@ -20,7 +20,10 @@ function Mycomponent(props) {
 
       <CTA
         ctaText={'Forgot Password?'}
-        onPress={() => {console.log('Forgot password pressed');navigation.replace('ForgotPassword')}}
+        onPress={() => {
+          console.log('Forgot password pressed');
+          navigation.replace('ForgotPassword');
+        }}
         style={{marginTop: 20}}
       />
 
@@ -45,25 +48,18 @@ export default function Login(props) {
   // const { state, updateUser } = useAuth();
   const {handleLogin} = useAuth();
 
-  // async function onSubmit(data) {
-
-  //     console.log('in onSubmit');
-  //     console.log('data', JSON.stringify(data));
-
-  // }
-
   async function onSubmit(state) {
     setLoading(true);
 
     try {
       let response = await api.login(state);
-      console.log('response in login', response);
       await handleLogin(response);
 
       setLoading(false);
 
       //check if username is null
       let username = response.user.username !== null;
+      console.log(response.user.username);
       if (username) navigate('App');
       else navigation.replace('Username');
     } catch (error) {
@@ -74,15 +70,15 @@ export default function Login(props) {
 
   // let formProps = {title: "Submit", fields, onSubmit, loading };
   return (
-    <View style={{flex: 1, paddingHorizontal: 16, backgroundColor: '#fff'}}>
-
-      <MForm
-        mFormData={mFormData}
-        validation={validation}
-        onSubmitData={onSubmit}
-        Extracomp={Mycomponent}
-        navigation={navigation}
-      />
-    </View>
+    // <View style={{flex: 1, paddingHorizontal: 16, backgroundColor: '#fff'}}>
+    // </View>
+    <MForm
+      mFormData={mFormData}
+      validation={validation}
+      onSubmitData={onSubmit}
+      Extracomp={Mycomponent}
+      navigation={navigation}
+      button_title={'Login'}
+    />
   );
 }

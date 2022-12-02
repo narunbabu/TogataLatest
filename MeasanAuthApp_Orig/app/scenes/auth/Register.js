@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
+import {Alert, View, Text} from 'react-native';
 import mFormData from './Registration/register_form';
 import validation from './Registration/register_validation';
 // import value_data from './House/set_values';
-import {View, Text} from 'react-native';
+
 import CTA from '../../components/CTA';
 import {Header, ErrorText} from '../../components/Shared';
 
@@ -16,10 +17,11 @@ function Mycomponent(props) {
   return (
     <View>
       <CTA
-        title={"Already have an account?"}
-        ctaText={"Login"}
-        onPress={() => navigation.replace("Login")}
-        style={{marginTop: 50}}/>
+        title={'Already have an account?'}
+        ctaText={'Login'}
+        onPress={() => navigation.replace('Login')}
+        style={{marginTop: 50}}
+      />
     </View>
   );
 }
@@ -33,24 +35,24 @@ export default function Register(props) {
     setLoading(true);
 
     try {
-        let response = await api.register(state);
-        console.log(response);
-        setLoading(false);
-        Alert.alert(
-            'Registration Successful',
-            response.message,
-            [{text: 'OK', onPress: () => navigation.replace("Login")}],
-            {cancelable: false},
-        );
+      let response = await api.register(state);
+      console.log('response in register', response);
+      setLoading(false);
+      Alert.alert(
+        'Registration Successful',
+        response.message,
+        [{text: 'OK', onPress: () => navigation.replace('Login')}],
+        {cancelable: false},
+      );
     } catch (error) {
-        setError(error.message);
-        setLoading(false)
+      setError(error.message);
+      setLoading(false);
     }
-}
+  }
 
   // let formProps = {title: "Submit", fields, onSubmit, loading };
   return (
-    <View style={{flex: 1, paddingHorizontal: 16, backgroundColor: '#fff'}}>
+    <View style={{flex: 1, paddingHorizontal: 16, backgroundColor: '#181e34'}}>
       <Text>Registration</Text>
       <MForm
         mFormData={mFormData}
@@ -58,6 +60,7 @@ export default function Register(props) {
         onSubmitData={onSubmit}
         Extracomp={Mycomponent}
         navigation={navigation}
+        button_title={'Register'}
       />
     </View>
   );

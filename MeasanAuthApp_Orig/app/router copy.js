@@ -5,7 +5,7 @@ import {createAppContainer, createSwitchNavigator} from 'react-navigation';
 //IMPORT ROUTES
 import AuthStack from './routes/auth';
 // import HomeStack from "./routes/home";
-import HomeStack from "./routes/home_c";
+import HomeStack from "./routes/HomeContainer";
 
 import AuthLoading from './scenes/auth/AuthLoading';
 import AuthProvider from './provider';

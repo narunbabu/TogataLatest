@@ -4,8 +4,8 @@ import {Text, View, StyleSheet, Image} from 'react-native';
 export default () => {
   return (
     <View style={styles.container}>
-      <Image style={styles.logo} source={require('./assets/hero.jpg')} />
-      <Text style={styles.paragraph}>React Native Forms Tutorial</Text>
+      <Image style={styles.logo} source={require('./assets/logo2.png')} />
+      <Text style={styles.paragraph}>తొగట వీర క్షత్రియ</Text>
     </View>
   );
 };

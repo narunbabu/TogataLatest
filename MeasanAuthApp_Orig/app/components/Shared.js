@@ -3,47 +3,46 @@ import {View, Text, StyleSheet} from 'react-native';
 import {Icon, Badge} from 'react-native-elements';
 
 //HEADER COMPONENT
-export const Header = (props) => {
-    let {title, style} = props;
+export const Header = props => {
+  let {title, style} = props;
 
-    return (
-        <View style={[styles.header, style]}>
-            <Text style={styles.headerText}>
-                {title}
-            </Text>
-        </View>
-    )
+  return (
+    <View style={[styles.header, style]}>
+      <Text style={styles.headerText}>{title}</Text>
+    </View>
+  );
 };
 
 Header.defaultProps = {
-    title: "",
-    style: {}
+  title: '',
+  style: {},
 };
 
 //ERROR COMPONENT
 export const ErrorText = ({error}) => {
-    return <Text style={styles.errorText}>{error}</Text>
+  return <Text style={styles.errorText}>{error}</Text>;
 };
 
 ErrorText.defaultProps = {
-    error: ""
+  error: '',
 };
 
 const styles = StyleSheet.create({
-    header: {
-        height: 50,
-        justifyContent: "center"
-    },
+  header: {
+    height: 50,
+    justifyContent: 'center',
+  },
 
-    headerText: {
-        fontSize: 25,
-        color: "#362068",
-        fontWeight: "400",
-        fontFamily: "Helvetica Neue"
-    },
+  headerText: {
+    fontSize: 25,
+    color: '#aaa',
+    // color: "#362068",
+    fontWeight: '400',
+    fontFamily: 'Helvetica Neue',
+  },
 
-    errorText:{
-        marginBottom: 8,
-        color:"red"
-    }
+  errorText: {
+    marginBottom: 8,
+    color: 'red',
+  },
 });
