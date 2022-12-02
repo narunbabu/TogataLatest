@@ -17,7 +17,7 @@ export default function HomeStack() {
   return (
   <Drawer.Navigator initialRouteName="Home">
       <Drawer.Screen name="Home" component={HomeScreen} />
-      <Drawer.Screen name="Update Profile" component={UpdateProfileScreen} />
+      <Drawer.Screen name="UpdateProfile" component={UpdateProfileScreen} />
       <Drawer.Screen name="EnterHouseDetails" component={EnterHouseDetailsScreen} />
     </Drawer.Navigator>
   );
