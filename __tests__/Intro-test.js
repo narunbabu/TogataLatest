@@ -1,12 +1,12 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 // import AddHouse from '../MeasanAuthApp_Orig/app/scenes/home/AddHouse';
-import Simple from '../FormExample/Simple';
+// import Simple from '../FormExample/Simple';
 // import Intro from '../Intro';
-import mFormData from '../MeasanAuthApp_Orig/app/scenes/home/House/house_form';
+import mFormData from '../MeasanAuthApp_Orig/app/scenes/home/Profile/profile_form';
 var fs = require('fs');
 var properties={'tablename':'HouseDetails',
-                'migration_file':'/2022_11_09_120000_house_details_tables.php',
+                'migration_file':'/2022_12_02_120000_profile_tables.php',
                 'model_prefix':'hd_',
             };
 
@@ -227,17 +227,17 @@ const printfields=function(){
     console.log(valmstr);
 };
 
-// migFilecreation();
-// modelsCreation();
-// seederCreation();
-// validationCreation();
+migFilecreation();
+modelsCreation();
+seederCreation();
+validationCreation();
 printfields();
 
 
 test('renders correctly', () => {
-    // console.log(mFormData);
+    console.log('mFormData');
     // console.log(bigstr); .replaceAll(',','')
-  const tree = renderer.create(<Simple />).toJSON();        
+//   const tree = renderer.create(<Simple />).toJSON();        
 //   console.log(tree);
-  expect(tree).toMatchSnapshot();
+//   expect(tree).toMatchSnapshot();
 });

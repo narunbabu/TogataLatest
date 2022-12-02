@@ -1,50 +1,37 @@
-import React, { useState } from 'react';
-import {View} from 'react-native';
+import React, {useState} from 'react';
+import mFormData from './UpdateProfile/profile_form';
+import validation from './UpdateProfile/profile_validation';
+import MForm from '../../formcomponents';
 
-import * as api from "../../services/auth";
-import { useAuth } from "../../provider";
+export default function UpdateProfile(props) {
+    
+  async function onSubmit(data) {
+    console.log('in onSubmit');
+    console.log('data', JSON.stringify(data));
+    // setLoading(true);
 
-// import Form from 'react-native-basic-form';
-import {ErrorText} from "../../components/Shared";
+    // try {
+    //     let response = await api.updateProfile(state.user._id, data);
+    //     updateUser(response.user);
 
-export default function UpdateProfile (props) {
-    const {navigation} = props;
+    //     setLoading(false);
 
-    //1 - DECLARE VARIABLES
-    const [error, setError] = useState(null);
-    const [loading, setLoading] = useState(false);
-    const { state, updateUser } = useAuth();
+    //     navigation.goBack();
+    // } catch (error) {
+    //     setError(error.message);
+    //     setLoading(false)
+    // }
+  }
 
-    const fields = [
-        {name: 'firstName', label: 'First Name', required: true, value:state.user.surname},
-        {name: 'lastName', label: 'Last Name', required: true, value:state.user.name},
-        {name: 'username', label: 'Username', required: true, value:state.user.email}
-    ];
-
-    async function onSubmit(data) {
-        setLoading(true);
-
-        try {
-            let response = await api.updateProfile(state.user._id, data);
-            updateUser(response.user);
-
-            setLoading(false);
-
-            navigation.goBack();
-        } catch (error) {
-            setError(error.message);
-            setLoading(false)
-        }
-    }
-
-    let formProps = {title: "Submit", fields, onSubmit, loading };
-    return (
-        <View style={{flex:1, paddingHorizontal: 16}}>
-            <View style={{flex:1}}>
-                <ErrorText error={error}/>
-                <Text>Update profilescreen</Text>
-                {/* <Form {...formProps}/> */}
-            </View>
-        </View>
-    );
-};
+  // let formProps = {title: "Submit", fields, onSubmit, loading };
+  return (
+    <MForm
+      mFormData={mFormData}
+      validation={validation}
+      onSubmitData={onSubmit}
+      Extracomp={Mycomponent}
+      navigation={navigation}
+      button_title={'Submit'}
+    />
+  );
+}
