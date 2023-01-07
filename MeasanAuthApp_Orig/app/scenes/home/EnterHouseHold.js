@@ -1,23 +1,9 @@
 import React, {useState} from 'react';
 import mFormData from './Household/house_hold_form';
 import validation from './Household/house_hold_validation';
-// import {View} from 'react-native';
-
-// import * as api from "../../services/auth";
-// import { useAuth } from "../../provider";
-
-// import Form from 'react-native-basic-form';
-// import {ErrorText} from "../../components/Shared";
 import MForm from '../../formcomponents';
 
 export default function EnterHouseHold(props) {
-  // const {navigation} = props;
-
-  // //1 - DECLARE VARIABLES
-  // const [error, setError] = useState(null);
-  // const [loading, setLoading] = useState(false);
-  // const { state, updateUser } = useAuth();
-
   async function onSubmit(data) {
     console.log('in onSubmit');
     console.log('data', JSON.stringify(data));

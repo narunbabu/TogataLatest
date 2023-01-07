@@ -69,52 +69,52 @@ class Drawer extends React.Component {
             { flexDirection: "row", justifyContent: "space-between" }
           ]}
         >
-          <View
-            style={{ alignItems: "flex-start", justifyContent: "flex-start" }}
-          >
-            <Avatar size={50} />
-            <Text
-              style={{
-                fontSize: 20,
-                fontWeight: "800",
-                color: colors.secondary
-              }}
+            <View
+              style={{ alignItems: "flex-start", justifyContent: "flex-start" }}
             >
-              {this.props.profileName}
-            </Text>
-            <Text
-              style={{
-                fontSize: 16,
-                color: colors.dark_gray,
-                marginVertical: 5
-              }}
-            >
-              {this.props.profileUserName}
-            </Text>
-            <View style={{ marginVertical: 10 }}>
-              {this.state.customExtra ? (
-                this.props.profileExtra
-              ) : (
-                <Text style={{ fontSize: 16, color: colors.dark_gray }}>
-                  {this.props.profileExtra}
-                </Text>
-              )}
+              <Avatar size={50} />
+              <Text
+                style={{
+                  fontSize: 20,
+                  fontWeight: "800",
+                  color: colors.secondary
+                }}
+              >
+                {this.props.profileName}
+              </Text>
+              <Text
+                style={{
+                  fontSize: 16,
+                  color: colors.dark_gray,
+                  marginVertical: 5
+                }}
+              >
+                {this.props.profileUserName}
+              </Text>
+              <View style={{ marginVertical: 10 }}>
+                {this.state.customExtra ? (
+                  this.props.profileExtra
+                ) : (
+                  <Text style={{ fontSize: 16, color: colors.dark_gray }}>
+                    {this.props.profileExtra}
+                  </Text>
+                )}
+              </View>
             </View>
-          </View>
-          <View
-            style={{
-              alignItems: "flex-end",
-              justifyContent: "flex-start"
-            }}
-          >
-            <TouchableOpacity>
-              <Image
-                style={{ height: 30, width: 30 }}
-                resizeMode={"contain"}
-                source={require("../../../assets/topMore.png")}
-              />
-            </TouchableOpacity>
-          </View>
+            <View
+              style={{
+                alignItems: "flex-end",
+                justifyContent: "flex-start"
+              }}
+            >
+              <TouchableOpacity>
+                <Image
+                  style={{ height: 30, width: 30 }}
+                  resizeMode={"contain"}
+                  source={require("../../../assets/topMore.png")}
+                />
+              </TouchableOpacity>
+            </View>
         </View>
 
         <View

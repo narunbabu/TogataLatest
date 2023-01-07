@@ -36,7 +36,9 @@ function NotificationsScreen({ navigation }) {
     </View>
   );
 
-  const Tab = createBottomTabNavigator();
+
+}
+const Tab = createBottomTabNavigator();
 
 function HomeTabs() {
   return (
@@ -45,7 +47,6 @@ function HomeTabs() {
       <Tab.Screen name="Profile" component={ProfileScreen} />
     </Tab.Navigator>
   );
-}
 }
 
 const Drawer = createDrawerNavigator();
@@ -57,7 +58,7 @@ export default function FavApp() {
 
       <RootStack.Navigator>
         <RootStack.Screen
-          name="Home"
+          name="MHome"
           component={HomeTabs}
           screenOptions={{ headerShown: false }}
         />
@@ -70,7 +71,6 @@ export default function FavApp() {
         <Drawer.Screen name="Notifications" component={NotificationsScreen} />
       </Drawer.Navigator>
 
-       <HomeTabs/>
 
     </NavigationContainer>
   );

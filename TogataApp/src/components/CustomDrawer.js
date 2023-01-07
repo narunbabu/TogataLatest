@@ -11,9 +11,10 @@ import {
   DrawerItemList,
 } from '@react-navigation/drawer';
 
-import Ionicons from 'react-native-vector-icons/Ionicons';
-import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
-
+// import Ionicons from 'react-native-vector-icons/Ionicons';
+// import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import { FontAwesome5 } from '@expo/vector-icons';
+import { Ionicons } from '@expo/vector-icons';
 const CustomDrawer = props => {
   return (
     <View style={{flex: 1}}>

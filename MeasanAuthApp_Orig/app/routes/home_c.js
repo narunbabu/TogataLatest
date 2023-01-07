@@ -1,5 +1,5 @@
 import React from 'react';
-import {createStackNavigator} from 'react-navigation-stack';
+
 
 //IMPORT SCENES
 import HomeScreen from '../scenes/home/Home';
@@ -11,7 +11,7 @@ import HomeScreen from '../scenes/home/Home';
 import {headerStyle, headerTitleStyle} from '../theme';
 import EnterHouseDetailsScreen from '../scenes/home/EnterHouseDetails';
 // import EnterHouseHoldScreen from '../scenes/home/EnterHouseHold';
-
+import {createStackNavigator} from 'react-navigation-stack';
 const HomeStack = createStackNavigator(
   {
     Home: HomeScreen,

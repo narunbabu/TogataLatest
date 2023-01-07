@@ -28,20 +28,20 @@ export default createAppContainer(
         },
         { initialRouteName: "Home" }
       ),
-      // Drawer: createStackNavigator({
-      //   Profile: Search,
-      //   Popular: UnderConstruction,
-      //   Saved: UnderConstruction,
-      //   Discover: UnderConstruction,
-      //   Configuration: UnderConstruction,
-      //   "Help Center": UnderConstruction
-      // }),
-      // Details: createStackNavigator({
-      //   Tweet: UnderConstruction,
-      //   "New Tweet": UnderConstruction,
-      //   "New Message": UnderConstruction,
-      //   DynamicTitle: UnderConstruction
-      // })
+      Drawer: createStackNavigator({
+        Profile: Search,
+        Popular: UnderConstruction,
+        Saved: UnderConstruction,
+        Discover: UnderConstruction,
+        Configuration: UnderConstruction,
+        "Help Center": UnderConstruction
+      }),
+      Details: createStackNavigator({
+        Tweet: UnderConstruction,
+        "New Tweet": UnderConstruction,
+        "New Message": UnderConstruction,
+        DynamicTitle: UnderConstruction
+      })
     },
     {
       initialRouteName: "Main",

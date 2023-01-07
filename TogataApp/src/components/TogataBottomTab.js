@@ -6,8 +6,6 @@ import { width, colors } from "../utils/utils";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 const TabOption = function(props) {
-
-
   return (
     <TouchableOpacity
       style={{

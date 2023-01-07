@@ -41,7 +41,7 @@ class Home extends React.Component {
           </Text>
         }
       >
-         {/* <ScrollView style={styles.container}>
+          <ScrollView style={styles.container}>
           {homeFeed.map((i, n) => (
             <TouchableOpacity
               key={n.toString()}
@@ -56,7 +56,7 @@ class Home extends React.Component {
               <Tweet data={i} />
             </TouchableOpacity>
           ))}
-        </ScrollView>  */}
+        </ScrollView>  
       </NavigationWraper>
     );
   }

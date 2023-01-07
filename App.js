@@ -23,7 +23,12 @@ import TogataApp from './TogataApp/App';
 import CDApp from './drawer_app/CustomDrawerApp';
 
 import NavSvgApp from './NavSvgApp/App';
-
+import BTabsApp from './drawer_app/BottomTabs';
+import TogataFullApp from './TogataApp/TogataFullApp';
+// import TogataSwithchApp from './TogataApp/TogataSwitchApp2'
+import TestApp from './TogataApp/TestApp';
+import N5App from './NavV5Ab/App';
+import NV5App from './NavV5/App';
 
 // export default  App;
 // import { RootNavigator } from './TwitterCloneApp/src/rootNavigator';
@@ -31,8 +36,17 @@ import NavSvgApp from './NavSvgApp/App';
 export default function App() {
   // const [isLoading, setIsLoadingFromAsyncStorage] = useState(true);
   return <TogataApp />;
+  return <NV5App/>;
   return <TApp />;
-  return <NavSvgApp />
+  // return <NavSvgApp />;
+  // return <TogataFullApp/>;
+  
+  // return <TestApp />
+  // return <TogataSwithchApp/>;
+  // return <BTabsApp />;
+
+  
+  
   // return <AllApp />
   // return <MeasanApp />;
   // return <CDApp />;

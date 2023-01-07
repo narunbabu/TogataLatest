@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 // import AddHouse from '../MeasanAuthApp_Orig/app/scenes/home/AddHouse';
 // import Simple from '../FormExample/Simple';
 // import Intro from '../Intro';
-import mFormData from '../MeasanAuthApp_Orig/app/scenes/home/Profile/profile_form';
+import mFormData from '../MeasanAuthApp_Orig/app/scenes/home/UpdateProfile/profile_form';
 var fs = require('fs');
 var properties={'tablename':'HouseDetails',
                 'migration_file':'/2022_12_02_120000_profile_tables.php',
